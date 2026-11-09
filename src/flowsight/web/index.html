@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flowsight</title>
+    <link rel="stylesheet" href="/static/app.css" />
+    <script type="module" src="/static/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Flowsight</h1>
+      <p class="muted">Where pull requests wait, and what to do about it.</p>
+      <form id="form">
+        <input id="repo" name="repo" placeholder="owner/name" value="withastro/astro" autocomplete="off" aria-label="Repository" />
+        <select id="days" aria-label="Period">
+          <option value="14">last 14 days</option>
+          <option value="28" selected>last 28 days</option>
+          <option value="56">last 56 days</option>
+          <option value="90">last 90 days</option>
+        </select>
+        <button type="submit">Analyse</button>
+      </form>
+      <p class="quick">
+        Try:
+        <button type="button" data-repo="withastro/astro">withastro/astro</button>
+        <button type="button" data-repo="vitejs/vite">vitejs/vite</button>
+        <button type="button" data-repo="astral-sh/ruff">astral-sh/ruff</button>
+      </p>
+      <p id="status" class="status" hidden></p>
+    </header>
+
+    <main id="results" hidden>
+      <section>
+        <h2 id="title"></h2>
+        <p id="subtitle" class="muted small"></p>
+        <div id="tiles" class="tiles"></div>
+      </section>
+
+      <section class="ai">
+        <div class="ai-head">
+          <div>
+            <h2>AI investigation</h2>
+            <p id="ai-meta" class="muted small">
+              Reads the waiting pull requests and every merge, then says what is going on and what
+              to do this week.
+            </p>
+          </div>
+          <button id="explain" type="button">Investigate with AI</button>
+        </div>
+        <ol id="steps" class="steps" hidden></ol>
+        <div id="answer"></div>
+        <div id="todo"></div>
+        <div id="areas"></div>
+        <div id="digest"></div>
+      </section>
+    </main>
+  </body>
+</html>
