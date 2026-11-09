@@ -1,0 +1,58 @@
+{
+ "insights": {
+  "model": "gemini-3.5-flash-lite",
+  "prompt_version": "insight-v7",
+  "date": "2026-11-16",
+  "trials": 2,
+  "right": 10,
+  "total": 10,
+  "no_answer": 0,
+  "scenarios": [
+   {
+    "name": "reviewer_absence",
+    "story": "The busiest reviewer (40% of reviews) stops; the other three absorb it slowly.",
+    "planted": [
+     "reviewer_capacity"
+    ],
+    "right": 2,
+    "total": 2
+   },
+   {
+    "name": "larger_changes",
+    "story": "Pull requests become five times larger and take longer to pick up.",
+    "planted": [
+     "larger_changes"
+    ],
+    "right": 2,
+    "total": 2
+   },
+   {
+    "name": "demand_spike",
+    "story": "Twice as many pull requests arrive for the same three reviewers.",
+    "planted": [
+     "demand_spike"
+    ],
+    "right": 2,
+    "total": 2
+   },
+   {
+    "name": "stable",
+    "story": "Nothing changes: the same team, volume and pace in both windows.",
+    "planted": [
+     "no_significant_change"
+    ],
+    "right": 2,
+    "total": 2
+   },
+   {
+    "name": "tiny_sample",
+    "story": "Four pull requests per window: a big-looking change that the data cannot support.",
+    "planted": [
+     "no_significant_change"
+    ],
+    "right": 2,
+    "total": 2
+   }
+  ]
+ }
+}

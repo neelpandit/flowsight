@@ -1,0 +1,17 @@
+{
+  "name": "flowsight-web",
+  "private": true,
+  "description": "Single-page UI for Flowsight, compiled into src/flowsight/web/app.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "typescript": "~6.0"
+  },
+  "allowScripts": {}
+}
